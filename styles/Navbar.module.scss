@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  height: 80px;
+  position: relative;
+  img {
+    cursor: pointer;
+  }
+}
+
+.active {
+  z-index: 100;
+  display: block;
+}
+.inactive {
+  z-index: 100;
+  display: none;
+}

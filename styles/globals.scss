@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: sans-serif;
+  background-color: #0b0d17;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  // font-family: 'Bellefair', serif;
 }
 
 a {
@@ -13,4 +18,51 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navOverlayInactive {
+  z-index: -1;
+  display: none;
+}
+
+.navOverlayActive {
+  display: block;
+  padding-top: 6rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  //backdrop blur effect compatible on all browsers
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  -o-backdrop-filter: blur(20px);
+  -moz-backdrop-filter: blur(20px);
+  z-index: 1;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-left: 2rem;
+    li {
+      margin-top: 2rem;
+      letter-spacing: 2.7px;
+      cursor: pointer;
+      span {
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: #ffc107;
+      }
+    }
+  }
 }
