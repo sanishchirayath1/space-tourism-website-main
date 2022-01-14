@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({params}) => {
-    const crew = data.crew.find(crew => crew.id === params.crew)
+    const crew = data.crew.find(crew => crew.id === params?.crew)
     return {
         props: {
             crew

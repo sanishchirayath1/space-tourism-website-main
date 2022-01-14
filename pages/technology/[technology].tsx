@@ -1,6 +1,7 @@
 import data from '../../data.json';
 import type { Technology } from '../../type';
 import type { GetStaticProps, GetStaticPaths } from "next"
+import { ParsedUrlQuery } from 'querystring';
 
 function crew({technology} : {technology: Technology}) {
     console.log(technology)
@@ -26,11 +27,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({params}) => {
-    const technology = data.technology.find(technology => technology.id === params.technology)
-    return {
-        props: {
-            technology
+        const technology = data.technology.find(technology => technology.id === params?.technology)
+        return {
+            props: {
+                technology
+            }
         }
-    }
+        
 }
+
 
