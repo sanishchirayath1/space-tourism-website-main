@@ -13,14 +13,16 @@ function Navbar() {
 
     return (
         <div className={styles.container}>
-            <Link href="/" passHref>
-                <Image 
-                src="/assets/shared/logo.svg" 
-                alt="logo" 
-                width={40} 
-                height={40}
-                onClick={() => setIsOpen(false)}
-                />
+            <Link href="/">
+                <a>
+                    <Image 
+                    src="/assets/shared/logo.svg" 
+                    alt="logo" 
+                    width={40} 
+                    height={40}
+                    onClick={() => setIsOpen(false)}
+                    />
+                </a>
             </Link>
             
             {isOpen ? 
@@ -48,15 +50,15 @@ function Navbar() {
                         <a><li onClick={handleClick}><span>00 </span> Home</li></a>
                     </Link>
                     
-                    <Link href="/destination" passHref>
+                    <Link href="/destination">
                     <a><li onClick={handleClick}><span>01</span> Destination</li></a>
                     </Link>
                     
-                    <Link href="/crew" passHref>
+                    <Link href="/crew">
                     <a><li onClick={handleClick}><span>02</span> Crew</li></a>
                     </Link>
                     
-                    <Link href="/technology" passHref>
+                    <Link href="/technology">
                     <a><li onClick={handleClick}><span>03</span> Technology</li></a>
                     </Link>
                     
