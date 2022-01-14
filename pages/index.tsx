@@ -7,7 +7,7 @@ import HeroSection from '../components/HeroSection'
 
 const Home: NextPage = () => {
   return (
-    <Layout>
+    <div>
       <Head>
         <title>Space tourism</title>
         <meta name="description" content="Space tourism" />
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <HeroSection/>
       </main>
-    </Layout>
+    </div>
   )
 }
 export default Home
