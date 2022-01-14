@@ -55,14 +55,33 @@ a {
     li {
       margin-top: 2rem;
       letter-spacing: 2.7px;
+      display: flex;
+      align-items: center;
       cursor: pointer;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 30px;
+        margin-left: auto;
+        background-color: #fff;
+        opacity: 0;
+
+      }
       span {
         font-weight: bold;
+        margin-left: 1rem;
+        margin-right: 0.5rem; 
       }
-
       &:hover {
         color: #ffc107;
+        &::after {
+          opacity: 1;
+        }
       }
+
     }
+
+    
   }
 }

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import styles from "../styles/Navbar.module.scss"
 import { useState } from "react"
+import { DEFAULT_MAX_VERSION } from "tls"
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
