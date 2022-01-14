@@ -19,7 +19,7 @@ function Navbar() {
                 alt="logo" 
                 width={40} 
                 height={40}
-                onClick={handleClick}
+                onClick={() => setIsOpen(false)}
                 />
             </Link>
             
@@ -44,20 +44,20 @@ function Navbar() {
             }
             <nav className={isOpen ? "navOverlayActive" : "navOverlayInactive"}>     
                 <ul>
-                    <Link href="/" passHref  >
-                        <li onClick={handleClick}><span>00 </span> Home</li>
+                    <Link href="/">
+                        <a><li onClick={handleClick}><span>00 </span> Home</li></a>
                     </Link>
                     
                     <Link href="/destination" passHref>
-                        <li onClick={handleClick}><span>01</span> Destination</li>
+                    <a><li onClick={handleClick}><span>01</span> Destination</li></a>
                     </Link>
                     
                     <Link href="/crew" passHref>
-                        <li onClick={handleClick}><span>02</span> Crew</li>
+                    <a><li onClick={handleClick}><span>02</span> Crew</li></a>
                     </Link>
                     
                     <Link href="/technology" passHref>
-                        <li onClick={handleClick}><span>03</span> Technology</li>
+                    <a><li onClick={handleClick}><span>03</span> Technology</li></a>
                     </Link>
                     
 
