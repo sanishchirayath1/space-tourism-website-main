@@ -1,12 +1,24 @@
 import data from '../../data.json';
 import type { Crew } from '../../type';
 import type { GetStaticProps, GetStaticPaths } from "next"
+import Image from 'next/image';
+import Dots from '../../components/Dots';
 
 function crew({crew} : {crew: Crew}) {
     console.log(crew)
     return (
         <div>
-            this is {crew.name} page
+            <h1> <span>02</span> Meet your crew</h1>
+            <Image
+               src={crew.images.webp}
+               alt={crew.name}
+               height={200}
+               width={200}
+            />
+            <Dots />
+            <div>{crew.role}</div>
+            <h2>{crew.name}</h2>
+            <p>{crew.bio}</p>
         </div>
     )
 }

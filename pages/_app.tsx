@@ -4,9 +4,12 @@ import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return(  
-  <Layout>
-      <Component {...pageProps} />
-  </Layout>
+    <div className='container'>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
+  
   )
 }
 

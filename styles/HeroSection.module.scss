@@ -6,10 +6,6 @@
   align-items: center;
   position: relative;
   height: calc(100vh - 80px);
-  background-image: url("/assets/home/background-home-mobile.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   h1 {
     text-transform: uppercase;
@@ -64,14 +60,4 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .container {
-    background-image: url("/assets/home/background-home-tablet.jpg");
-  }
-}
 
-@media screen and (min-width: 1440px) {
-  .container {
-    background-image: url("/assets/home/background-home-desktop.jpg");
-  }
-}

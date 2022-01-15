@@ -1,13 +1,26 @@
 import data from '../../data.json';
 import type { Technology } from '../../type';
 import type { GetStaticProps, GetStaticPaths } from "next"
-import { ParsedUrlQuery } from 'querystring';
+import Image from 'next/image';
+import NumberNav from '../../components/NumberNav';
 
 function crew({technology} : {technology: Technology}) {
     console.log(technology)
     return (
         <div>
-            this is {technology.name} page
+            <h1><span>03</span> Space lunch 101</h1>
+            <Image
+                src={technology.images.landscape}
+                alt={technology.name}
+                width={375}
+                height={200} 
+            />
+            <NumberNav/>
+            <div>The terminology...</div>
+            <h2>{technology.name}</h2>
+            <p>
+                {technology.description}
+            </p>
         </div>
     )
 }

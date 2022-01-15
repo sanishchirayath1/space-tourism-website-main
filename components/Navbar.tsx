@@ -7,8 +7,7 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
 
     function handleClick() {
-        console.log("clicked")
-        setIsOpen(!isOpen)
+        setIsOpen(false)
     }
 
     return (
@@ -31,7 +30,7 @@ function Navbar() {
                 alt="close icon"
                 width={24}
                 height={24}
-                onClick={handleClick}
+                onClick={() => setIsOpen(!isOpen)}
                 className={isOpen ? styles.active : styles.inactive}
                 /> 
             :
@@ -40,7 +39,7 @@ function Navbar() {
                 alt="hamburger icon"
                 width={24}
                 height={24}
-                onClick={handleClick}
+                onClick={() => setIsOpen(!isOpen)}
                 className={isOpen ? styles.inactive : styles.active}
                 />
             }
@@ -50,15 +49,15 @@ function Navbar() {
                         <a><li onClick={handleClick}><span>00 </span> Home</li></a>
                     </Link>
                     
-                    <Link href="/destination">
+                    <Link href="/destination/1">
                     <a><li onClick={handleClick}><span>01</span> Destination</li></a>
                     </Link>
                     
-                    <Link href="/crew">
+                    <Link href="/crew/1">
                     <a><li onClick={handleClick}><span>02</span> Crew</li></a>
                     </Link>
                     
-                    <Link href="/technology">
+                    <Link href="/technology/1">
                     <a><li onClick={handleClick}><span>03</span> Technology</li></a>
                     </Link>
                     
